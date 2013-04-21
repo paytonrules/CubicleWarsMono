@@ -26,20 +26,23 @@ namespace CubicleWars
 	/// <summary>
 	/// Default Project Template
 	/// </summary>
-	public class Game1 : Game
+	public class Startup : Game
 	{
 
 	#region Fields
 		GraphicsDeviceManager graphics;
 		SpriteBatch spriteBatch;
 		Texture2D logoTexture;
+		Model model;
+		private Matrix world = Matrix.CreateTranslation(new Vector3(0, 0, 0));
+		private Matrix view = Matrix.CreateLookAt(new Vector3(0, 0, 10), new Vector3(0, 0, 0), Vector3.UnitY);
+		private Matrix projection = Matrix.CreatePerspectiveFieldOfView(MathHelper.ToRadians(45), 800f / 480f, 0.1f, 100f);
 	#endregion
 
 	#region Initialization
 
-		public Game1 ()
+		public Startup()
 		{
-
 			graphics = new GraphicsDeviceManager (this);
 			
 			Content.RootDirectory = "Content";
@@ -67,6 +70,8 @@ namespace CubicleWars
 			
 			// TODO: use this.Content to load your game content here eg.
 			logoTexture = Content.Load<Texture2D> ("logo");
+
+			model = Content.Load<Model>("stapler");
 		}
 
 	#endregion
@@ -99,10 +104,27 @@ namespace CubicleWars
 			// draw the logo
 			spriteBatch.Draw (logoTexture, new Vector2 (130, 200), Color.White);
 
-			spriteBatch.End ();
+			spriteBatch.End();
+
+			DrawModel(model, world, view, projection);
 
 			//TODO: Add your drawing code here
 			base.Draw (gameTime);
+		}
+
+		private void DrawModel(Model model, Matrix world, Matrix view, Matrix projection)
+		{
+			foreach (ModelMesh mesh in model.Meshes)
+			{
+				foreach (BasicEffect effect in mesh.Effects)
+				{
+					effect.World = world;
+					effect.View = view;
+					effect.Projection = projection;
+				}
+				
+				mesh.Draw();
+			}
 		}
 
 	#endregion

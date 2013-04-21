@@ -28,11 +28,11 @@ namespace CubicleWars
 
 	class AppDelegate : NSApplicationDelegate
 	{
-		Game1 game;
+		Startup game;
 
 		public override void FinishedLaunching (MonoMac.Foundation.NSObject notification)
 		{
-			game = new Game1 ();
+			game = new Startup ();
 			game.Run ();
 		}
 		

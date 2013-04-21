@@ -4,3 +4,5 @@ test-results
 *.userprefs
 TestResult.xml
 CubicleWars/obj/
+Thumbs.db
+.DS_Store
