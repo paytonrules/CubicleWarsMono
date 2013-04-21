@@ -3,6 +3,10 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CubicleWars", "CubicleWars\CubicleWars.csproj", "{EF8E3321-E4CC-49A3-9926-C32095FA1E13}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CubicleWarsLibrary", "CubicleWarsLibrary\CubicleWarsLibrary.csproj", "{25D42687-23D9-43A2-8EEB-4864EDE5CC96}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stateless", "stateless\src\Stateless\Stateless.csproj", "{A15EEC02-60EC-4705-A58B-A6ECD55A9628}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -10,6 +14,18 @@ Global
 		AppStore|x86 = AppStore|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{25D42687-23D9-43A2-8EEB-4864EDE5CC96}.AppStore|x86.ActiveCfg = Release|Any CPU
+		{25D42687-23D9-43A2-8EEB-4864EDE5CC96}.AppStore|x86.Build.0 = Release|Any CPU
+		{25D42687-23D9-43A2-8EEB-4864EDE5CC96}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{25D42687-23D9-43A2-8EEB-4864EDE5CC96}.Debug|x86.Build.0 = Debug|Any CPU
+		{25D42687-23D9-43A2-8EEB-4864EDE5CC96}.Release|x86.ActiveCfg = Release|Any CPU
+		{25D42687-23D9-43A2-8EEB-4864EDE5CC96}.Release|x86.Build.0 = Release|Any CPU
+		{A15EEC02-60EC-4705-A58B-A6ECD55A9628}.AppStore|x86.ActiveCfg = Release|Any CPU
+		{A15EEC02-60EC-4705-A58B-A6ECD55A9628}.AppStore|x86.Build.0 = Release|Any CPU
+		{A15EEC02-60EC-4705-A58B-A6ECD55A9628}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{A15EEC02-60EC-4705-A58B-A6ECD55A9628}.Debug|x86.Build.0 = Debug|Any CPU
+		{A15EEC02-60EC-4705-A58B-A6ECD55A9628}.Release|x86.ActiveCfg = Release|Any CPU
+		{A15EEC02-60EC-4705-A58B-A6ECD55A9628}.Release|x86.Build.0 = Release|Any CPU
 		{EF8E3321-E4CC-49A3-9926-C32095FA1E13}.AppStore|x86.ActiveCfg = AppStore|x86
 		{EF8E3321-E4CC-49A3-9926-C32095FA1E13}.AppStore|x86.Build.0 = AppStore|x86
 		{EF8E3321-E4CC-49A3-9926-C32095FA1E13}.Debug|x86.ActiveCfg = Debug|x86

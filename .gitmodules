@@ -1,3 +1,6 @@
 [submodule "CubicleWarsLibrary"]
 	path = CubicleWarsLibrary
 	url = git@github.com:paytonrules/CubicleWarsLibrary.git
+[submodule "stateless"]
+	path = stateless
+	url = git://github.com/slashdotdash/stateless.git
