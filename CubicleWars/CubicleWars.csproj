@@ -79,8 +79,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="Components\Floor.cs" />
-    <Compile Include="Components\Drone.cs" />
     <Compile Include="GameData.cs" />
+    <Compile Include="CubicleWarsGame.cs" />
+    <Compile Include="Components\CubicleWarsGameView.cs" />
+    <Compile Include="Components\Unit\Drone.cs" />
+    <Compile Include="Components\Unit\DrawableUnitController.cs" />
+    <Compile Include="Components\Unit\UnitView.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
@@ -109,5 +113,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Components\" />
+    <Folder Include="Components\Unit\" />
   </ItemGroup>
 </Project>

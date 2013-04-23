@@ -54,9 +54,10 @@ namespace CubicleWars
 			View = Matrix.CreateLookAt(new Vector3(0, -2, 10), new Vector3(0, 0, 0), Vector3.UnitY);
 			Projection = Matrix.CreatePerspectiveFieldOfView(MathHelper.ToRadians(45), 800f / 480f, 0.1f, 100f);
 
-			Components.Add(new Floor(this));
-			Components.Add(new Drone(this, GameData.GlobalData.PlayerOneName));
-			Components.Add (new Drone(this, GameData.GlobalData.PlayerTwoName));
+			CubicleWarsGame.Initialize(this);
+			Components.Add (new Floor (this));
+			Components.Add (new Drone (this, GameData.GlobalData.PlayerOneName));
+			Components.Add (new Drone (this, GameData.GlobalData.PlayerTwoName));
 		}
 
 		protected override void Initialize ()
@@ -78,7 +79,6 @@ namespace CubicleWars
 
 			if (lastMouseState.LeftButton == ButtonState.Pressed &&
 				mouseState.LeftButton == ButtonState.Released) {
-				Console.WriteLine ("CLICK");
 				int mouseX = mouseState.X;
 				int mouseY = mouseState.Y;
 
