@@ -80,22 +80,22 @@ namespace CubicleWars
 
 			if (lastMouseState.LeftButton == ButtonState.Pressed &&
 				mouseState.LeftButton == ButtonState.Released) {
-				int mouseX = mouseState.X;
-				int mouseY = mouseState.Y;
+				var mouseX = mouseState.X;
+				var mouseY = mouseState.Y;
 
-				var nearsource = new Vector3 ((float)mouseX, (float)mouseY, 0f);
-				var farsource = new Vector3 ((float)mouseX, (float)mouseY, 1f);
+				var nearsource = new Vector3 (mouseX, mouseY, 0f);
+				var farsource = new Vector3 (mouseX, mouseY, 1f);
 				
-				Matrix world = Matrix.CreateTranslation (0, 0, 0);
+				var world = Matrix.CreateTranslation (0, 0, 0);
 				
-				Vector3 nearPoint = graphics.GraphicsDevice.Viewport.Unproject (nearsource, Projection, View, world);
+				var nearPoint = graphics.GraphicsDevice.Viewport.Unproject (nearsource, Projection, View, world);
 				
-				Vector3 farPoint = graphics.GraphicsDevice.Viewport.Unproject (farsource, Projection, View, world);
+				var farPoint = graphics.GraphicsDevice.Viewport.Unproject (farsource, Projection, View, world);
 
 				// Create a ray from the near clip plane to the far clip plane.
-				Vector3 direction = farPoint - nearPoint;
+				var direction = farPoint - nearPoint;
 				direction.Normalize ();
-				Ray pickRay = new Ray (nearPoint, direction);
+				var pickRay = new Ray (nearPoint, direction);
 
 				MouseClick(this, new ClickEventArgs {pickingRay = pickRay});
 			}

@@ -60,8 +60,11 @@ namespace CubicleWars
 
 		public override void Draw(GameTime gameTime)
 		{
-			GraphicsDevice.SamplerStates[0].AddressU = TextureAddressMode.Wrap;
-			GraphicsDevice.SamplerStates[0].AddressV = TextureAddressMode.Wrap;
+			GraphicsDevice.SamplerStates[0] = new SamplerState
+			                                      {
+			                                          AddressU = TextureAddressMode.Wrap,
+                                                      AddressW = TextureAddressMode.Wrap
+			                                      };
 			
 			foreach (var pass in basicEffect.CurrentTechnique.Passes) {
 				pass.Apply ();

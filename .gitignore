@@ -12,3 +12,4 @@ _ReSharper.*/
 *.user
 obj/
 bin/
+*.cachefile
