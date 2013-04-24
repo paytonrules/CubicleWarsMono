@@ -52,6 +52,15 @@ namespace CubicleWars
 				playerOne.Drone.Health = 10;
 				playerOne.Drone.Model = "stapler";
 
+				playerOne.Sales = new UnitData();
+				/*playerOne.Sales.Location = new Vector3(3, 2, 0);
+				playerOne.Sales.Scale = 0.5f;
+				playerOne.Sales.RotationX = 270;
+				playerOne.Sales.RotationZ = 35;*/
+				playerOne.Sales.Name = "Drone";
+				playerOne.Sales.Health = 10;
+				playerOne.Sales.Model = "stapler";
+
 				dynamic playerTwo = new ExpandoObject();
 				playerTwo.TintColor = new Vector3(0.251f, 0.376f, 0.663f);
 				playerTwo.Drone = new UnitData();
@@ -62,6 +71,8 @@ namespace CubicleWars
 				playerTwo.Drone.Name = "Drone";
 				playerTwo.Drone.Health = 10;
 				playerTwo.Drone.Model = "stapler";
+
+
 
 				data[GlobalData.PlayerOneName] = playerOne;
 				data[GlobalData.PlayerTwoName] = playerTwo;

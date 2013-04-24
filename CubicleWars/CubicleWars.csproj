@@ -11,6 +11,7 @@
     <RootNamespace>CubicleWars</RootNamespace>
     <MonoMacResourcePrefix>Resources</MonoMacResourcePrefix>
     <AssemblyName>CubicleWars</AssemblyName>
+    <SuppressXamMacUpsell>True</SuppressXamMacUpsell>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
     <DebugSymbols>True</DebugSymbols>
@@ -68,11 +69,13 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
-    <Reference Include="MonoMac" />
-    <Reference Include="MonoGame.Framework">
-      <HintPath>..\..\..\Library\Application Support\MonoDevelop-3.0\LocalInstall\Addins\MonoDevelop.MonoGame.3.0.1\assemblies\MacOS\MonoGame.Framework.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="MonoGame.Framework">
+      <HintPath>..\..\..\Library\Application Support\XamarinStudio-4.0\LocalInstall\Addins\MonoDevelop.MonoGame.3.0.1\assemblies\MacOS\MonoGame.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="MonoMac">
+      <HintPath>..\MonoMac\MonoMac.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Main.cs" />
@@ -82,9 +85,8 @@
     <Compile Include="GameData.cs" />
     <Compile Include="CubicleWarsGame.cs" />
     <Compile Include="Components\CubicleWarsGameView.cs" />
-    <Compile Include="Components\Unit\Drone.cs" />
-    <Compile Include="Components\Unit\DrawableUnitController.cs" />
     <Compile Include="Components\Unit\UnitView.cs" />
+    <Compile Include="Components\Unit\UnitController.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />

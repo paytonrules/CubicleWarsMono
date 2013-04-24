@@ -56,8 +56,26 @@ namespace CubicleWars
 
 			CubicleWarsGame.Initialize(this);
 			Components.Add (new Floor (this));
-			Components.Add (new Drone (this, GameData.GlobalData.PlayerOneName));
-			Components.Add (new Drone (this, GameData.GlobalData.PlayerTwoName));
+			Components.Add (new UnitController(this, 
+			                                   GameData.GlobalData.PlayerOneName, 
+			                                   (UnitData) GameData.DataFor(GameData.GlobalData.PlayerOneName).Drone));
+			Components.Add (new UnitController(this, 
+			                                   GameData.GlobalData.PlayerOneName, 
+			                                   (UnitData) GameData.DataFor(GameData.GlobalData.PlayerOneName).Sales));
+			/*Components.Add (new UnitController(this, 
+			                                   GameData.GlobalData.PlayerOneName, 
+			                                   (UnitData) GameData.DataFor(GameData.GlobalData.PlayerOneName).Hacker));
+
+			Components.Add (new UnitController(this, 
+			                                   GameData.GlobalData.PlayerTwoName, 
+			                                   (UnitData) GameData.DataFor(GameData.GlobalData.PlayerTwoName).Drone));
+			Components.Add (new UnitController(this, 
+			                                   GameData.GlobalData.PlayerTwoName, 
+			                                   (UnitData) GameData.DataFor(GameData.GlobalData.PlayerTwoName).Sales));
+			Components.Add (new UnitController(this, 
+			                                   GameData.GlobalData.PlayerTwoName, 
+			                                   (UnitData) GameData.DataFor(GameData.GlobalData.PlayerTwoName).Hacker));*/
+
 		}
 
 		protected override void Initialize ()
