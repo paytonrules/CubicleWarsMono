@@ -3,10 +3,12 @@ test-results
 *.pidb
 *.userprefs
 TestResult.xml
-CubicleWars/obj/
 Thumbs.db
 .DS_Store
 
 *.sdf
 *.suo
 _ReSharper.*/
+*.user
+obj/
+bin/
